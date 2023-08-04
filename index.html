@@ -30,8 +30,6 @@
     </header>
     <main>
       <p style="margin: 0; font-size: 18px; color: red;">Готов! Покажет модалку как к Вам на почту придёт заполненная форма.</p>
-          <p style="margin: 0; font-size: 14px; color: blue;">PHPMailer - https://github.com/leska-ver/forma-mail.yandex2023/tree/main/PHPMailer</p>
-        <p style="margin: 0; font-size: 14px; color: blue;">mail.php - https://github.com/leska-ver/forma-mail.yandex2023/blob/main/mail.php</p>
       <section class="contact-form recording" id="contact-form">
         <div class="container recording__container">
           <h2 class="global-title text-center">Форма обратной связи</h2>
@@ -43,11 +41,11 @@
               <div class="recording__block">
                 <!--data здесь он обрабатывает плагин валидатор кода-->
                 <label class="recording__label" for="name">
-                  <input class="recording__input global-input" type="text" name="name" placeholder="Ваше имя"
+                  <input class="recording__input" type="text" name="name" placeholder="Ваше имя"
                   data-validate-field="name" id="name" required aria-label="Введите ваше имя">
                 </label>
                 <label class="recording__label recording__label_none999" for="tel">
-                  <input class="recording__input global-input" type="tel" placeholder="Телефон*"
+                  <input class="recording__input" type="tel" placeholder="Телефон*"
                   data-validate-field="tel" data-validate-rules="phone" name="tel" id="tel" aria-label="Введите ваш телефон">
                 </label>
                 <button class="recording__button btn recording__button_filled" aria-label="Нажмите чтобы отправить">

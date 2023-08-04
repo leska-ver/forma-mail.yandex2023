@@ -210,6 +210,7 @@ h6, .h6 {
   padding-right: 15px;
   padding-left: 15px;
 }
+
 @media (max-width: 1200px) {
   .container {
     max-width: 1200px;
@@ -218,6 +219,7 @@ h6, .h6 {
     margin-left: auto;
   }
 }
+
 @media (max-width: 999px) {
   .container {
     max-width: 960px;
@@ -232,11 +234,6 @@ h6, .h6 {
   .container {
     max-width: 540px;
   }
-}
-
-.display-block {
-  /*Вместо <b>*/
-  display: block;
 }
 
 .btn {
@@ -286,11 +283,6 @@ h6, .h6 {
   cursor: pointer
 }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
-  pointer-events: none;
-}
-
 /*weight*/
 .fw-700 {
   font-weight: 700;
@@ -312,49 +304,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-/*Инфо такст*/
-.global-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
 /*img*/
-.global-wrap-thumb {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.global-wrap_reverce .global-wrap-thumb {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-.global-wrap-text {
-  width: 590px;
-  padding-top: 85px;
-  margin-right: calc((100% - 1400px) / 2);
-}
-
-.global-wrap_reverce .global-wrap-text {
-  margin-right: 0;
-  margin-left: calc((100% - 1400px) / 2);
-}
-
 .global-title {
   color: var(--color-raphite);
   font-family: "Cera Pro";
@@ -362,15 +312,6 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 500;
   line-height: 1.36em;
   margin-bottom: 30px;
-}
-
-.global-title2 {
-  margin-bottom: 25px;
-  color: var(--color-raphite);
-  font-family: "Cera Pro";
-  font-size: 38px;
-  font-weight: 500;
-  line-height: 1.2em;
 }
 
 .global-text {
@@ -401,40 +342,6 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 0;
 }
 
-.global-text_ul-dotted ul {
-  padding-left: 15px;
-}
-
-.global-text_ul-dotted ul li {
-  position: relative;
-  padding-left: 35px;
-}
-
-.global-text_ul-dotted ul li::before {
-  display: block;
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: var(--color-raphite);
-  left: 0;
-  top: 10px;
-}
-
-.global-text_ul-dotted-deepSapphire ul li::before {
-  background-color: var(--color-deepSapphire);
-  /*синий фирмы rgb(9, 41, 114)*/
-}
-
-.global-text2 {
-  color: var(--color-raphite);
-  font-family: "Cera Pro";
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 1.3em;
-}
-
-
 /* Форма обратной связи Общие */
 .text-center {
   text-align: center;
@@ -461,48 +368,6 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 /* // Форма обратной связи Общие */
-
-/*btn_request Кнопка "Оставить заявку -> "*/
-.btn_request {
-  margin-top: 60px;
-  padding-right: 25px;
-  padding-left: 55px;
-  font-family: "Cera Pro";
-  font-size: 19px;
-  font-weight: 500;
-  color: var(--color-white);
-  /*синий фирмы rgb(9, 41, 114)*/
-  background-color: var(--color-deepSapphire);
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
-
-.btn_request:focus {
-  /*2353e0*/
-  background-color: rgba(35, 83, 224, 0.75);
-  
-}
-
-.btn_request:hover {
-  color: var(--color-white);
-  background-color: var(--color-toreaBay);
-}
-
-.btn_request:active {
-  color: var(--color-white);
-  /*;rgb(0, 159, 224) - cerulean - голубой фирмы*/
-  background-color: var(--collor-cerulean);
-  -webkit-box-shadow: inherit;
-  box-shadow: inherit;
-}
-
-.btn_request img {
-  display: inline-block;
-  width: 22px;
-  margin-left: 40px;
-}
-/* // Кнопка "Оставить заявку -> "*/
 
 /*---Скроллбар(d-31-ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ)---*/
 .simplebar-mask {
@@ -640,7 +505,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 /* // Крест выключатель модального окна*/
 
-/*---Стили формы ошибки, галка, цвет текста в файле d-31.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
+/*---Стили формы ошибки, галка, цвет текста в файле forma.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
 .modal-slonik {  
   display: flex;
   align-items: center;
@@ -709,7 +574,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-position: right;
 }
 /*** // modal-Модальное окно***/
-/*--- // Стили формы ошибки, галка, цвет текста в файле d-31.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
+/*--- // Стили формы ошибки, галка, цвет текста в файле forma.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
 
 
 /***Шапка header-1920px***/
@@ -850,22 +715,22 @@ input[type=checkbox]:active ~ label::before {
   padding-left: 0;
 }
 
-  .recording__checkbox-input:focus, input[type="checkbox"]:focus ~ label::before, .checkbox-js:checked + .recording__checkbox-label_js:focus::before {
-    border: 1px solid rgb(255, 105, 114);
-    background-color: var(--color-toreaBay);
-    outline: none;
-  }
+.recording__checkbox-input:focus, input[type="checkbox"]:focus ~ label::before, .checkbox-js:checked + .recording__checkbox-label_js:focus::before {
+  border: 1px solid rgb(255, 105, 114);
+  background-color: var(--color-toreaBay);
+  outline: none;
+}
 
-	/*Для Галпа*/
-  .recording__checkbox-input:focus-visible {
-    outline: none;
-  }
-  /* // Для Галпа*/
+/*Для Галпа*/
+.recording__checkbox-input:focus-visible {
+  outline: none;
+}
+/* // Для Галпа*/
 
- .recording__checkbox-input:hover, input[type="checkbox"]:hover ~ label::before {
-    border: 1px solid var(--color-deepSapphire);
-    background-color: var(--color-deepSapphire);
-  }
+.recording__checkbox-input:hover, input[type="checkbox"]:hover ~ label::before {
+  border: 1px solid var(--color-deepSapphire);
+  background-color: var(--color-deepSapphire);
+}
 
 .recording__checkbox-label_js {
   margin-right: 5px;
@@ -1070,17 +935,6 @@ height: 336px;
     min-width: 200px;
     min-height: 50px;
   }
-  
-  .global-wrap_reverce .global-wrap-text {
-    margin-right: 0;
-    margin-left: calc((100% - 1170px) / 2);
-  }
-
-  .global-wrap-text {
-    width: 530px;
-    padding-top: 40px;
-    margin-right: calc((100% - 1170px) / 2);
-  }
 
   .global-title {
     font-size: 36px;
@@ -1092,19 +946,6 @@ height: 336px;
   
   .global-text ul li {
     margin-bottom: 15px;
-  }
-  
-  .global-title2 {
-    margin-bottom: 20px;
-    font-size: 30px;
-  }
-  
-  .global-text_ul-dotted ul {
-    padding-left: 0;
-  }
-  
-  .global-text2 {
-    font-size: 19px;
   }
 
   /* contact-form Форма обратной связи + modal - 1600px */
@@ -1128,7 +969,7 @@ height: 336px;
     margin-bottom: 40px;
   }
 
-  .global-input {
+  .recording__input {
     height: 55px;
     font-size: 15px;
     padding-left: 20px;
@@ -1159,12 +1000,6 @@ height: 336px;
 
 
 @media (max-width: 1385px) { 
-  /*** CTI group управляет недвижимостью main-control-1385 ***/
-  .main-control .global-wrap-text {/*Мой 1366px не видит конец текста*/
-    padding-top: 0;
-  }
-  /*** CIT group управляет недвижимостью main-control-1385 ***/
-
   .modal-container {
     margin: 20px auto;
     padding: 20px 30px;
@@ -1191,35 +1026,9 @@ height: 336px;
   .global-text {
     font-size: 15px;
   }
-
-  .global-wrap {
-    padding-right: 15px;
-  }
-
-  .global-wrap_reverce {
-    padding-left: 15px;
-  }
   
   .global-title {
     margin-bottom: 20px;
-  }
-
-  .global-wrap-text {
-    margin-right: 0;
-    padding-top: 0;
-    width: 45%;
-  }
-
-  .global-wrap_reverce .global-wrap-text {
-    margin-left: 0;
-  }
-
-  .global-title2 {
-    font-size: 22px;
-  }
-
-  .global-text_ul-dotted ul li {
-    padding-left: 20px;
   }
   
   
@@ -1242,7 +1051,7 @@ height: 336px;
     padding: 50px 0 100px;
   }
 
-  .global-input {
+  .recording__input {
     height: 50px;
     padding-left: 10px;
   } 
@@ -1261,7 +1070,7 @@ height: 336px;
 }
 
 
-@media (max-width: 999px) {    
+@media (max-width: 999px) {
   .recording__label .js-validate-error-label {
     top: -21px;
   }  
@@ -1281,6 +1090,10 @@ height: 336px;
 
   .recording__button {
     width: 100%;
+  }    
+
+  .main-form__container-pol .modal-close {
+    right: 15px;
   }
 
   .footer__list {
@@ -1290,37 +1103,7 @@ height: 336px;
 
 
 @media (max-width: 770px) { 
-  /*** Общие стили 770px***/
-  .global-wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
-  .global-wrap_reverce {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-  }
-
-  .global-wrap-thumb {
-    width: 100%;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-
-  .global-wrap-text {
-    width: 100%;
-    padding: 25px 50px 0 15px;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-top: 25px;
-  }
-  
+  /*** Общие стили 770px***/  
   .global-title {
     font-size: 23px;
   }
@@ -1328,10 +1111,6 @@ height: 336px;
   .global-text p,
   .global-text ul {
     margin-bottom: 15px;
-  }
-
-  .global-text2 {
-    font-size: 15px;
   }
 
   .btn {
@@ -1351,7 +1130,7 @@ height: 336px;
     margin-bottom: 25px;
   }
 
-  .global-input {
+  .recording__input {
     height: 45px;
   }
 
@@ -1406,6 +1185,7 @@ height: 336px;
     padding: 10px;
   }    
   /*** Общие стили 580px***/
+
   .recording__button svg {
     margin-right: 10px;
     width: 18px;
