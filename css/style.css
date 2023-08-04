@@ -1,0 +1,1485 @@
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('../fonts/CeraPro-Regular.woff') format('woff2'),
+       url('../fonts/CeraPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;     
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('../fonts/CeraPro-Light.woff') format('woff2'),
+       url('../fonts/CeraPro-Light.woff2') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;     
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('../fonts/CeraPro-Black.woff') format('woff2'),
+       url('../fonts/CeraPro-Black.woff2') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;     
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('../fonts/CeraPro-Medium.woff') format('woff2'),
+       url('../fonts/CeraPro-Medium.woff2') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;     
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('../fonts/CeraPro-Bold.woff') format('woff2'),
+       url('../fonts/CeraPro-Medium.woff2') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;     
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #333;
+  --color-shark: #212529;
+  --color-raphite: #130b04;
+  --color-deepSapphire: #092972;/*синий фирмы rgb(9, 41, 114)*/
+  --color-toreaBay: #1134B5;
+  --collor-cerulean: #009fe0;/*;rgb(0, 159, 224) - cerulean - голубой фирмы*/
+  --color-dustyGray: #999;/*grey_shade*/
+  --color-gallery: #eaeaea;/*green_input*/
+  --color-osloGray: #8e9297;
+  --color-grayNickel: #c7c7c6;
+  --color-friarGray: #80807f;
+  --color-masala: #4c4947;
+  --color-hawkesBlue: #E3F2FD;
+  
+  /*just-validate-error - цвет ошибки*/
+  --color-error: #FF6972;
+  --color-sulu: #b8ec64;/*line-color*/
+}
+
+
+/*** Общие стили 1920px***/
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  /*Для .wrapper*/
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'OpenSans', sans-serif;
+  /*Общий шрифт 400*/
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-mineShaft);
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+img, svg {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*h1,
+h2,
+h3,
+p,
+a {
+  перенос слов
+  word-wrap: break-word;*/
+  /* перенос слова с дефисом 
+  hyphens: auto;
+}*/
+
+h1, h2, h3, h4, h5, h6 {
+  /*Обязательно убираем маргины у заголовок(Саша-Скиллбохс) */
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* отключает поведение изменения размера для textarea(Блок сообщения) */
+textarea {
+  resize: none;
+}
+
+button {
+  /*Лупа*/
+  background-color: inherit;
+  border: none;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1430px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (max-width: 999px) {
+  .container {
+    max-width: 960px;
+  }  
+}
+@media (max-width: 770px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 580px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+.display-block {
+  /*Вместо <b>*/
+  display: block;
+}
+
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 0;
+  border: 2px solid transparent;
+  font-weight: 400;
+  text-align: center;
+  white-space: pre-line;
+  /*Перенос названия*/
+  min-width: 250px;
+  min-height: 60px;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus,
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn.disabled,
+.btn:disabled {
+  opacity: .65;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+/*weight*/
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+/*// weight*/
+
+.label-hiden {
+  /*Лупа инпут*/
+  position: absolute;
+  left: -1001%;
+}
+
+/*Убрали у браузера Google крест из инпута (.header__search)*/
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/*Инфо такст*/
+.global-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+/*img*/
+.global-wrap-thumb {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.global-wrap_reverce .global-wrap-thumb {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.global-wrap-text {
+  width: 590px;
+  padding-top: 85px;
+  margin-right: calc((100% - 1400px) / 2);
+}
+
+.global-wrap_reverce .global-wrap-text {
+  margin-right: 0;
+  margin-left: calc((100% - 1400px) / 2);
+}
+
+.global-title {
+  color: var(--color-raphite);
+  font-family: "Cera Pro";
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 1.36em;
+  margin-bottom: 30px;
+}
+
+.global-title2 {
+  margin-bottom: 25px;
+  color: var(--color-raphite);
+  font-family: "Cera Pro";
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+.global-text {
+  color: var(--color-raphite);
+  font-family: "Cera Pro";
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.global-text p,
+.global-text ul,
+.global-text ol {
+  margin-bottom: 25px;
+}
+
+.global-text p:last-child,
+.global-text ul:last-child,
+.global-text ol:last-child {
+  margin-bottom: 0;
+}
+
+.global-text ul li {
+  margin-bottom: 25px;
+}
+
+.global-text ul li:last-child {
+  margin-bottom: 0;
+}
+
+.global-text_ul-dotted ul {
+  padding-left: 15px;
+}
+
+.global-text_ul-dotted ul li {
+  position: relative;
+  padding-left: 35px;
+}
+
+.global-text_ul-dotted ul li::before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-raphite);
+  left: 0;
+  top: 10px;
+}
+
+.global-text_ul-dotted-deepSapphire ul li::before {
+  background-color: var(--color-deepSapphire);
+  /*синий фирмы rgb(9, 41, 114)*/
+}
+
+.global-text2 {
+  color: var(--color-raphite);
+  font-family: "Cera Pro";
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+
+/* Форма обратной связи Общие */
+.text-center {
+  text-align: center;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* // Форма обратной связи Общие */
+
+/*btn_request Кнопка "Оставить заявку -> "*/
+.btn_request {
+  margin-top: 60px;
+  padding-right: 25px;
+  padding-left: 55px;
+  font-family: "Cera Pro";
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--color-white);
+  /*синий фирмы rgb(9, 41, 114)*/
+  background-color: var(--color-deepSapphire);
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.btn_request:focus {
+  /*2353e0*/
+  background-color: rgba(35, 83, 224, 0.75);
+  
+}
+
+.btn_request:hover {
+  color: var(--color-white);
+  background-color: var(--color-toreaBay);
+}
+
+.btn_request:active {
+  color: var(--color-white);
+  /*;rgb(0, 159, 224) - cerulean - голубой фирмы*/
+  background-color: var(--collor-cerulean);
+  -webkit-box-shadow: inherit;
+  box-shadow: inherit;
+}
+
+.btn_request img {
+  display: inline-block;
+  width: 22px;
+  margin-left: 40px;
+}
+/* // Кнопка "Оставить заявку -> "*/
+
+/*---Скроллбар(d-31-ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ)---*/
+.simplebar-mask {
+  /*Чтобы текст не прятался в прокрутке в блок*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.simplebar-content-wrapper {
+  /*авто включение js для скролл*/
+  overflow: auto;
+}
+
+.simplebar-track.simplebar-vertical {
+  /*Прокрутку двигаем*/ 
+  right: 10px;
+  bottom: 20px;
+} 
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  /*Прокрутку двигаем*/
+  top: 45px;
+  right: 0;
+}
+
+.simplebar-scrollbar::before {
+  /*Из библиотеки*/
+  /*Здесь(кодепен) цвет не работает*/
+  /*На компе и в css работает*/
+  height: 70px;
+  background-color: var(--color-mediumPurple);
+  /* opacity: 1; */
+}
+
+.main-form__container-pol .simplebar-scrollbar::before {
+  /*Из библиотеки*/
+  /*Здесь(кодепен) цвет не работает*/
+  /*На компе и в css работает*/
+  height: 212px;
+  background-color: var(--color-deepSapphire);
+  /* opacity: 1; */
+}
+/*--- // Скроллбар---*/
+
+/*** modal-Модальное окно***/
+.modal {  
+  display: none;
+  justify-content: center;
+  width: 750px;
+  background-color: var(--color-white);
+  position: fixed;
+  overflow: auto;/*Будет прокрутка когда она не умещается в экране*/
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 990;/*Для js*/
+  /*Для modal-active*/
+  transform: scale(0);
+}
+
+.modal::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.modal-active {
+  display: block;
+  align-items: center;
+  height: 100%;
+  background-color: rgba(51,51,51,.3);
+  transform: scale(1);
+}
+
+.modal-wrap {
+  display: inline-block;  
+  margin: 39px;
+  max-width: 500px;
+  width: 100%;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.modal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 10px;
+  width: 1000px;
+  height: 950px;  
+  background-color: var(--color-white);  
+  transform: scale(1);
+  transition: transform 500ms;  
+}
+/*** // modal-Модальное окно***/
+
+/*Крест выключатель модального окна*/
+.modal-close {
+  position: absolute;
+  top: 5px;
+  right: 33px;
+  outline: none; 
+  border-radius: 7px;
+  border: 1px solid transparent;
+  width: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;  
+  -webkit-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  -ms-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  -moz-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  -o-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  cursor: pointer;    
+}
+
+.modal-close:focus { 
+  color: var(--color-white);
+  background-color: var(--collor-cerulean); 
+  outline: none;
+}
+
+.modal-close:hover { 
+  color: var(--color-white); 
+  background-color: var(--color-deepSapphire);
+}
+
+.modal-close:active {
+  opacity: .5;
+}
+/* // Крест выключатель модального окна*/
+
+/*---Стили формы ошибки, галка, цвет текста в файле d-31.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
+.modal-slonik {  
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 100%;  
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.main-form__slonik_js {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;/*Для js перекрыть .modal*/
+}
+
+.main-form__slonik_js_active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-slonik-sps {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 624px;
+  padding: 30px;
+  border-radius: 10px;
+  min-width: 260px;
+  background-color: var(--color-white);
+  opacity: 0;  
+  -webkit-transition: opacity 0.15s linear;
+  -ms-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;  
+  overflow: hidden; 
+}
+
+ .main-form__slonik-sps_js {
+  display: none;
+  opacity: 0;
+}
+
+ .main-form__slonik-sps_js_active {
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-form__elephant-png {
+  margin-bottom: 32px;
+  width: 274px;
+  height: 183px;
+  background-image: url("../img/sps.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+/*** // modal-Модальное окно***/
+/*--- // Стили формы ошибки, галка, цвет текста в файле d-31.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
+
+
+/***Шапка header-1920px***/
+
+.header {
+  position: relative; 
+  margin-left: -15px;
+  padding-bottom: 25px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(0, 55, 255) 0%, rgb(0, 133, 255) 50%);
+  opacity: 0.8;
+}
+
+.header__container {
+  position: relative;
+  padding: 0 35px;
+}
+
+/*** contact-form recording Форма обратной связи + modal - 1920px ***/
+.recording {
+  position: relative;
+  padding: 185px 0;
+  background: var(--color-white);
+  z-index: 0;
+}
+
+.recording .global-title {
+  margin-bottom: 60px;
+}
+
+/*---Телефон валидация и маска---*/
+.recording__form {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1240px;
+  width: 100%;
+}
+
+.recording__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+/*Для формы отправки*/
+.js-validate-error-label {
+  position: absolute;
+  top: 100%;
+  right: 5px;
+}
+/* // Для формы отправки*/
+
+.recording__input {
+  padding-left: 30px;
+  border: 2px solid var(--color-osloGray);
+  width: 100%;
+  height: 60px;
+  font-family: "Cera Pro";
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color-raphite);
+}
+
+.recording__input:focus {
+  outline: none;
+}
+
+/*Стили формы ошибки, цвет текста в файле form-js - colorWrong: '#ff6972'*/
+.recording__label {
+  /*общий*//*Для формы ошибки .js-validate-error-label*/
+  position: relative;
+  width: 34.6%;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: -30px;
+  left: 3px;
+  font-size: 12px;
+}
+
+/*Для data-validate-field="checkbox"*/
+.recording__checkbox-container .js-validate-error-label {
+  top: -19px;
+  left: 0px;
+}
+/* // Для data-validate-field="checkbox"*/
+
+/*Для JustValidate галочка-Принимаю в recording*/
+input[type=checkbox]:focus ~ label::before {
+  outline: none;
+  border: 2px solid rgb(255, 105, 114);
+  background-color: var(--color-toreaBay);
+}
+
+input[type=checkbox]:active ~ label::before {
+  border: 2px solid var(--color-sulu);
+}
+/* // Для JustValidate галочка-Принимаю в recording*/
+
+/*ховерит input в recording*/
+.recording__checkbox-input:hover, input[type="checkbox"]:hover ~ label::before {
+  border: 1px solid var(--color-deepSapphire);
+  background-color: var(--color-deepSapphire);
+}
+
+/*Моя форма - recording__form*/
+.recording__checkbox-label {
+  /*Для формы ошибки .js-validate-error-label*/
+  position: relative;
+}
+
+.recording__checkbox-container, .main-form__checkbox {
+  position: relative;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.recording__checkbox-input {
+  padding-left: 0;
+  opacity: 0;
+}
+
+.recording__checkbox-label_js {
+  padding-left: 0;
+}
+
+  .recording__checkbox-input:focus, input[type="checkbox"]:focus ~ label::before, .checkbox-js:checked + .recording__checkbox-label_js:focus::before {
+    border: 1px solid rgb(255, 105, 114);
+    background-color: var(--color-toreaBay);
+    outline: none;
+  }
+
+	/*Для Галпа*/
+  .recording__checkbox-input:focus-visible {
+    outline: none;
+  }
+  /* // Для Галпа*/
+
+ .recording__checkbox-input:hover, input[type="checkbox"]:hover ~ label::before {
+    border: 1px solid var(--color-deepSapphire);
+    background-color: var(--color-deepSapphire);
+  }
+
+.recording__checkbox-label_js {
+  margin-right: 5px;
+  font-family: Manrope;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.3em;
+  color: var(--color-raphite);
+}
+
+.recording__checkbox-label_js::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -17px;
+  border: 1px solid var(--color-dustyGray);
+  border-radius: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--collor-cerulean);
+  cursor: pointer;
+  -webkit-transition: border-color 0.05s linear, background-color 0.05s linear;
+  -ms-transition: border-color 0.05s linear, background-color 0.05s linear;
+  -moz-transition: border-color 0.05s linear, background-color 0.05s linear;
+  -o-transition: border-color 0.05s linear, background-color 0.05s linear;
+  transition: border-color 0.05s linear, background-color 0.05s linear;
+}
+
+.checkbox-js:checked + .recording__checkbox-label_js::before {
+  border-color: var(--collor-cerulean);
+  background-color: var(--collor-cerulean);
+}
+
+.recording__checkbox-label_js::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -14.5px;
+  /*Для галки none*/
+  display: none;
+  border-top: 2px solid var(--color-white);
+  border-right: 2px solid var(--color-white);
+  border-radius: 2px;
+  width: 9px;
+  height: 6px;
+  transform: rotate(123deg);
+  cursor: pointer;
+  -webkit-transition: background-image 0.05s linear;
+  -ms-transition: background-image 0.05s linear;
+  -moz-transition: background-image 0.05s linear;
+  -o-transition: background-image 0.05s linear;
+  transition: background-image 0.05s linear;
+}
+
+/*Галка*/
+.checkbox-js:checked + .recording__checkbox-label_js::after {
+  display: block;
+}
+/* // Галка*/
+
+.recording__checkbox-link {
+  color: var(--color-raphite);
+  text-decoration: underline;
+  -webkit-transition: .2s ease-in-out; 
+  -ms-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.recording__checkbox-link:hover {
+  color: var(--collor-cerulean);
+}
+
+.recording__checkbox-link:focus {
+  color: var(--color-white);
+  background-color: var(--color-toreaBay);
+  outline: none;
+}
+
+.recording__checkbox-link:active {
+  color: var(--color-white);
+  background-color: var(--color-deepSapphire);
+}
+
+/*contact-form Кнопка "Форма обратной связи"*/
+.recording__button {
+  padding-right: 15px;
+  padding-left: 15px;  
+  width: 24%;
+  font-family: "Cera Pro";
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1;
+  /*#092972 - deepSapphire - синий фирмы*/
+  color: var(--color-white);
+  background-color: rgba(9, 41, 114, 0.75);
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.recording__button:focus {
+  color: var(--color-white);
+  /*rgb(9, 41, 114); - deepSapphire - синий фирмы*/
+  background-color: var(--color-deepSapphire);
+}
+
+.recording__button:hover {
+  color: var(--color-white);
+  background-color: rgb(0, 159, 224);
+  /*var(--collor-cerulean) - cerulean - голубой фирмы*/
+}
+
+.recording__button:active {
+  /*rgb(9, 41, 114); - deepSapphire - синий фирмы*/
+  border: 2px solid var(--color-deepSapphire);
+}
+
+.recording__button_filled:disabled {
+  color: #080808;
+  border-color: #EAEAEA;
+  background-color: #EAEAEA;
+}
+
+.recording__button_filled:disabled path {
+  fill: #080808;
+}
+
+.recording__button svg {
+  display: inline-block;
+  margin-right: 30px;
+  margin-left: 0;/*перебила стили в .btn_request img - 40px*/
+  width: 20px;
+}
+/* // Кнопка "Форма обратной связи"*/
+/*** // Форма recording-1920px***/
+
+
+/*Модалка формы-1920px*/
+.main-form__modal-h2 {
+  color: #130b04;
+  font-family: "Cera Pro";
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 1.36em;
+  margin-bottom: 30px;
+}
+/* // Модалка формы*/
+
+/*Для размера модалки*/
+.main-form__block {
+  /*Ширина только в этом модальном окне. Т.к. она не в модальном окне */
+  width: 93%;
+}
+
+.main-form__block .simplebar-content {/*Не удалять!*/
+height: 336px;
+}
+/* // Для размера модалки*/
+
+/*modal ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ 1920px*/
+.main-form__container-pol {
+  padding: 29px 30px 24px;
+  width: 900px;
+  height: 420px;
+}
+
+.main-form__modal-container-pol p {
+  margin: 0;
+}
+/* // modal ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ 1920px*/
+
+.main-form__slonik {
+  position: fixed;
+  overflow: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.main-form__slonik::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+
+
+/*** Подвал footer - 1920px ***/
+.footer {
+  position: relative;
+  background-color: var(--color-deepSapphire);
+  /*синий фирмы rgb(9, 41, 114)*/
+}
+/*** // Подвал footer - 1920px ***/
+
+
+@media(max-width:1600px) {
+  /*** Общие стили 1600px***/
+  .btn {
+    min-width: 200px;
+    min-height: 50px;
+  }
+  
+  .global-wrap_reverce .global-wrap-text {
+    margin-right: 0;
+    margin-left: calc((100% - 1170px) / 2);
+  }
+
+  .global-wrap-text {
+    width: 530px;
+    padding-top: 40px;
+    margin-right: calc((100% - 1170px) / 2);
+  }
+
+  .global-title {
+    font-size: 36px;
+  }
+
+  .global-text {
+    font-size: 17px;
+  }
+  
+  .global-text ul li {
+    margin-bottom: 15px;
+  }
+  
+  .global-title2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  
+  .global-text_ul-dotted ul {
+    padding-left: 0;
+  }
+  
+  .global-text2 {
+    font-size: 19px;
+  }
+
+  /* contact-form Форма обратной связи + modal - 1600px */
+  .recording__button {
+    font-size: 17px;
+  }
+  /* // contact-form Форма обратной связи + modal - 1600px */
+  /*** // Общие стили 1920px***/
+
+
+  /***Шапка header-1600px***/
+  
+
+
+  /*** contact-form Форма обратной связи + modal - 1600px ***/
+  .contact-form {
+    padding: 100px 0;
+  }
+
+  .contact-form .global-title {
+    margin-bottom: 40px;
+  }
+
+  .global-input {
+    height: 55px;
+    font-size: 15px;
+    padding-left: 20px;
+  }
+
+  .recording {
+    padding: 100px 0;
+  }  
+  /*** // contact-form Форма обратной связи + modal - 1600px ***/
+
+  /***modal-1600px***/  
+  .main-form__container-pol {
+    margin: 40px auto;
+    padding: 29px 30px 24px;
+    width: 100%;
+    height: 700px;
+  }
+  
+  .main-form__container-pol .simplebar-scrollbar::before {
+    height: 195px;
+  }    
+
+  .main-form__modal-h2 {
+    font-size: 36px;
+  }
+  /*** // modal-1600px***/  
+}
+
+
+@media (max-width: 1385px) { 
+  /*** CTI group управляет недвижимостью main-control-1385 ***/
+  .main-control .global-wrap-text {/*Мой 1366px не видит конец текста*/
+    padding-top: 0;
+  }
+  /*** CIT group управляет недвижимостью main-control-1385 ***/
+
+  .modal-container {
+    margin: 20px auto;
+    padding: 20px 30px;
+    height: 500px;
+  }
+
+  .main-form__container-pol .simplebar-scrollbar::before {
+    height: 40px;
+  }
+}
+
+
+@media(max-width:1200px) {
+  /*** Общие стили 1200px ***/
+  .global-title {
+    font-size: 30px;
+  }
+  
+  .btn {
+    min-width: 170px;
+    min-height: 50px;
+  }
+  
+  .global-text {
+    font-size: 15px;
+  }
+
+  .global-wrap {
+    padding-right: 15px;
+  }
+
+  .global-wrap_reverce {
+    padding-left: 15px;
+  }
+  
+  .global-title {
+    margin-bottom: 20px;
+  }
+
+  .global-wrap-text {
+    margin-right: 0;
+    padding-top: 0;
+    width: 45%;
+  }
+
+  .global-wrap_reverce .global-wrap-text {
+    margin-left: 0;
+  }
+
+  .global-title2 {
+    font-size: 22px;
+  }
+
+  .global-text_ul-dotted ul li {
+    padding-left: 20px;
+  }
+  
+  
+  /*btn_request Кнопка "Оставить заявку -> "*/
+  .btn_request {
+    margin-top: 30px;
+    padding-right: 20px;
+    padding-left: 30px;
+  }
+
+  .btn_request img {
+    width: 18px;
+    margin-left: 15px;
+  }
+  /* // btn_request Кнопка "Оставить заявку -> "*/  
+  /*** // Общие стили 1200px ***/
+
+  /*** contact-form Форма обратной связи + modal - 1200px ***/
+  .contact-form {
+    padding: 50px 0 100px;
+  }
+
+  .global-input {
+    height: 50px;
+    padding-left: 10px;
+  } 
+  
+  .recording__button {
+    min-height: 50px;
+    font-size: 15px;
+    margin-top: 0;
+  }
+  /*** // contact-form Форма обратной связи + modal - 1200px ***/
+
+  .main-form__modal-h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }  
+}
+
+
+@media (max-width: 999px) {    
+  .recording__label .js-validate-error-label {
+    top: -21px;
+  }  
+  
+  .recording__label_none999 .js-validate-error-label {  
+    display: none;
+  }
+
+  .recording__block {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .recording__label {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .recording__button {
+    width: 100%;
+  }
+
+  .footer__list {
+    display: block;
+  }
+}
+
+
+@media (max-width: 770px) { 
+  /*** Общие стили 770px***/
+  .global-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .global-wrap_reverce {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .global-wrap-thumb {
+    width: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .global-wrap-text {
+    width: 100%;
+    padding: 25px 50px 0 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 25px;
+  }
+  
+  .global-title {
+    font-size: 23px;
+  }
+
+  .global-text p,
+  .global-text ul {
+    margin-bottom: 15px;
+  }
+
+  .global-text2 {
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 12px 40px;
+    min-width: 170px;
+    min-height: 45px;
+  }
+  /*** // Общие стили 770px***/
+
+ 
+  /*** contact-form Форма обратной связи + modal - 770px ***/
+  .contact-form {
+    padding: 40px 0 70px;
+  }
+
+  .contact-form .global-title {
+    margin-bottom: 25px;
+  }
+
+  .global-input {
+    height: 45px;
+  }
+
+  .recording__button {
+    font-size: 14px;
+  }
+  /*** // contact-form Форма обратной связи + modal - 770px ***/
+
+  .modal-container {
+    margin: auto;
+    padding: 15px 30px;
+    min-height: 552px;
+  }
+
+  .modal-close {
+    top: 15px;
+    right: 15px;
+    font-size: 16px;
+  }    
+
+  .modal-slonik-sps {
+    flex-basis: auto;
+    min-width: 160px;
+  }  
+
+  .main-form__elephant-png {
+    margin-bottom: 20px;
+    width: 193px;
+    height: 181px;
+  }  
+
+  .main-form__slonik-sps .main-form__modal-h2 {
+    margin-bottom: 0;
+  }
+}
+
+  
+@media (max-width: 580px) {
+  /*** Общие стили 580px***/
+  .btn {
+    padding: 12px 33px;
+    width: 100%;
+    min-height: 35px;
+  }
+
+  .modal-wrap {
+    margin: 20px 0;
+    max-width: 260px;
+  }  
+
+  .modal-container {
+    padding: 10px;
+  }    
+  /*** Общие стили 580px***/
+  .recording__button svg {
+    margin-right: 10px;
+    width: 18px;
+  }
+
+  .main-form__modal-h2 {
+    margin-bottom: 16px;
+    font-size: 28px;
+    line-height: 1;
+    /* перенос слова с дефисом */
+    hyphens: auto;
+  }
+  
+  .main-form__block {
+    width: 100%;
+  }
+
+  .main-form__container-pol .modal-close {
+    top: 7px;
+    right: 7px;
+  }  
+
+  .main-form__container-pol .simplebar-mask {
+    margin-top: 5px;
+  } 
+
+  .main-form__container-pol .main-form__modal-h2 {
+    margin: 16px 0;
+  }  
+
+  .main-form__heading {
+    font-size: 22px;
+  }
+
+  .modal-slonik-sps {
+    padding: 20px 15px;
+  }
+
+  .modal-slonik-sps {
+    padding: 20px 10px;
+  }
+
+  .main-form__elephant-png {
+    width: 150px;
+    height: 141px;
+  }
+
+  .main-form__slonik-sps .main-form__modal-h2 {
+    font-size: 18px;
+  }
+}  
+   
+@media (max-width: 400px) {
+  /*** Общие стили 400px***/
+  .main-form__modal-h2 {
+    font-size: 24px;
+  }
+  /*** // Общие стили 400px***/
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

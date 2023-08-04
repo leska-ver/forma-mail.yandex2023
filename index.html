@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Для поиска в сети-->
+  <meta name="description" content="Рады видеть Вас на своём сайте.">
+  <meta property="og:title" content="Недвижимость">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="здесь ссылка на сайт">
+  <!-- <meta property="og:image" content="картинка для поисковиков ссылка"> -->
+  <meta property="og:image"
+    content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Yandex_Mail_icon.svg/768px-Yandex_Mail_icon.svg.png конверт от яндекса пнг.png">
+  <meta name="keywords" content="недвижимость, покупка, обмен, жильё, квартира, дом, ипотека, банк">
+  <!-- //Для поиска в сети-->
+  <!--Скроллбар recording/ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ-->
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <title>Форма, заглушка модалка, ответ на почте от mail.php</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="visually-hidden">Я для семантики</h1>    
+    <header class="header">
+      <div class="container header__container"></div>
+    </header>
+    <main>
+      <section class="contact-form recording" id="contact-form">
+        <!--  id="recording" -->
+        <div class="container recording__container">
+          <h2 class="global-title text-center">Форма обратной связи</h2>
+          <!--Телефон-->
+          <div class="recording__form margin--right">
+            <form class="recording__form form-js   main-form__form main-form__form_js   form-disabled" action="mail.php" method="POST" enctype="multipart/form-data" aria-label="Здесь вы можете заказать обратный звонок"><!-- id="checkboxForm" -->
+              <input type="hidden" name="admin_email[]" value="lyaisan.333@yandex.ru"><!-- artgoldcti@yandex.ru -->
+              <input type="hidden" name="form_subject" value="Заявка с сайта --Форма, заглушка модалка, ответ на почте от mail.php--">
+              <div class="recording__block">
+                <!--data здесь он обрабатывает плагин валидатор кода-->
+                <label class="recording__label" for="name">
+                  <input class="recording__input global-input" type="text" name="name" placeholder="Ваше имя"
+                  data-validate-field="name" name="name" id="name" required aria-label="Введите ваше имя">
+                </label>
+                <label class="recording__label recording__label_none999" for="tel">
+                  <input class="recording__input global-input" type="tel" placeholder="Телефон*"
+                  data-validate-field="tel" data-validate-rules="phone" name="tel" id="tel" aria-label="Введите ваш телефон">
+                </label>
+                <button class="recording__button btn recording__button_filled" aria-label="Нажмите чтобы отправить">
+                  <!-- <img src="./img/button_icon_send.svg" alt=""> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20px" height="14px" version="1.1" viewBox="0 0 0.48 0.34" xmlns:xlink="http://www.w3.org/1999/xlink"> <path d="M0.44 0l-0.4 0c-0.02,0 -0.04,0.02 -0.04,0.04l0 0.25c0,0.03 0.02,0.05 0.04,0.05l0.4 0c0.02,0 0.04,-0.02 0.04,-0.05l0 -0.25c0,-0.02 -0.02,-0.04 -0.04,-0.04zm-0.01 0.03c-0.01,0.01 -0.17,0.17 -0.18,0.18 -0.01,0 -0.02,0 -0.02,0l-0.18 -0.18 0.38 0zm-0.4 0.26l0 -0.24 0.12 0.12 -0.12 0.12zm0.02 0.02l0.12 -0.12 0.04 0.04c0.01,0.01 0.04,0.01 0.06,0l0.04 -0.04 0.12 0.12 -0.38 0zm0.4 -0.02l-0.12 -0.12 0.12 -0.12 0 0.24zm0 0z" fill="#ffffff" fill-rule="nonzero"/></svg>
+                  <span>Отправить</span>
+                </button>
+              </div>
+              <div class="recording__checkbox-container">
+                <input class="recording__checkbox-input input-checkbox checkbox-js checkbox-disabled" id="checkbox" type="checkbox" checked="checked" aria-label="Нажмите если принимаете пользовательское соглашение" required="" data-validate-field="checkbox">
+                <label class="recording__checkbox-label recording__checkbox-label_js   main-form__label-checkbox" for="checkbox">
+                  Отправляя свои данные, Вы соглашаетесь с
+                </label>
+                <a class="recording__checkbox-link modalBtn-js   main-form__link" href="#" data-modal-trigger="trigger-1"
+                  aria-label="Нажмите чтобы прочитать Политикой конфиденциальности">Политикой конфиденциальности</a>
+              </div>
+            </form>
+          </div><!-- recording__form-->
+        </div>
+      </section>
+      <div class="main-form__modal modal" data-modal="trigger-1">
+        <div class="main-form__block">
+          <div class="modal-wrap">
+            <div class="main-form__container-pol modal-container" data-simplebar>
+              <button class="main-form__modal-close modal-close" title="Закрыть">&#x2715;</button>
+              <h2 class="main-form__modal-h2 h2">
+                Политика конфиденциальности
+              </h2>
+              <div class="global-text">
+                <h3 class="main-form__heading">Кто мы</h3>
+                <p>
+                  <strong class="privacy-policy-tutorial">Предлагаемый текст: </strong>
+                  Наш адрес сайта: https://dvoreckiy.com.
+                </p>
+                <h3 class="main-form__heading">Комментарии</h3>
+                <p>
+                  <strong class="privacy-policy-tutorial">Предлагаемый текст: </strong>
+                  Если посетитель оставляет комментарий на сайте, мы собираем данные указанные в форме комментария, а также
+                  IP адрес посетителя и данные user-agent браузера с целью определения спама.
+                </p>
+                <p>Анонимизированная строка создаваемая из вашего адреса email (&#171;хеш &#187;) может предоставляться
+                  сервису Gravatar, чтобы определить используете ли вы его. Политика конфиденциальности Gravatar доступна
+                  здесь: https://automattic.com/privacy/ . После одобрения комментария ваше изображение профиля будет
+                  видимым публично в контексте вашего комментария.</p>
+                <h3 class="main-form__heading">Медиафайлы</h3>
+                <p>
+                  <strong class="privacy-policy-tutorial">Предлагаемый текст: </strong>
+                  Если вы зарегистрированный пользователь и загружаете фотографии на сайт, вам возможно следует избегать
+                  загрузки изображений с метаданными EXIF, так как они могут содержать данные вашего месторасположения по
+                  GPS. Посетители могут извлечь эту информацию скачав изображения с сайта.
+                </p>
+                <h3 class="main-form__heading">Куки</h3>
+                <p>
+                  <strong class="privacy-policy-tutorial">Предлагаемый текст: </strong>
+                  Если вы оставляете комментарий на нашем сайте, вы можете включить сохранение вашего имени, адреса email и
+                  вебсайта в куки. Это делается для вашего удобства, чтобы не заполнять данные снова при повторном
+                  комментировании. Эти куки хранятся в течение одного года.
+                </p>
+                <p>Если у вас есть учетная запись на сайте и вы войдете в неё, мы установим временный куки для определения
+                  поддержки куки вашим браузером, куки не содержит никакой личной информации и удаляется при закрытии вашего
+                  браузера.</p>
+                <p>При входе в учетную запись мы также устанавливаем несколько куки с данными входа и настройками экрана.
+                  Куки входа хранятся в течение двух дней, куки с настройками экрана &#8212;год. Если вы выберете
+                  возможность &#171;Запомнить меня &#187;, данные о входе будут сохраняться в течение двух недель. При
+                  выходе из учетной записи куки входа будут удалены.</p>
+                <p>При редактировании или публикации статьи в браузере будет сохранен дополнительный куки, он не содержит
+                  персональных данных и содержит только ID записи отредактированной вами, истекает через 1 день.</p>
+                <h3 class="main-form__heading">Встраиваемое содержимое других вебсайтов</h3>
+                <p>
+                  <strong class="privacy-policy-tutorial">Предлагаемый текст: </strong>
+                  Статьи на этом сайте могут включать встраиваемое содержимое (например видео, изображения, статьи и др.),
+                  подобное содержимое ведет себя так же, как если бы посетитель зашел на другой сайт.
+                </p>
+                <p>Эти сайты могут собирать данные о вас, использовать куки, внедрять дополнительное отслеживание третьей
+                  стороной и следить за вашим взаимодействием с внедренным содержимым, включая отслеживание взаимодействия,
+                  если у вас есть учетная запись и вы авторизовались на том сайте.</p>
+                <h3 class="main-form__heading">С кем мы делимся вашими данными</h3>
+                <p>
+                  <strong class="privacy-policy-tutorial">Предлагаемый текст: </strong>
+                  Если вы запросите сброс пароля, ваш IP будет указан в email-сообщении о сбросе.
+                </p>
+                <h3 class="main-form__heading">Как долго мы храним ваши данные</h3>
+                <p>
+                  <strong class="privacy-policy-tutorial">Предлагаемый текст: </strong>
+                  Если вы оставляете комментарий, то сам комментарий и его метаданные сохраняются неопределенно долго. Это
+                  делается для того, чтобы определять и одобрять последующие комментарии автоматически, вместо помещения их
+                  в очередь на одобрение.
+                </p>
+                <p>Для пользователей с регистрацией на нашем сайте мы храним ту личную информацию, которую они указывают в
+                  своем профиле. Все пользователи могут видеть, редактировать или удалить свою информацию из профиля в любое
+                  время (кроме имени пользователя). Администрация вебсайта также может видеть и изменять эту информацию.</p>
+                <h3 class="main-form__heading">Какие у вас права на ваши данные</h3>
+                <p>
+                  <strong class="privacy-policy-tutorial">Предлагаемый текст: </strong>
+                  При наличии учетной записи на сайте или если вы оставляли комментарии, то вы можете запросить файл
+                  экспорта персональных данных, которые мы сохранили о вас, включая предоставленные вами данные. Вы также
+                  можете запросить удаление этих данных, это не включает данные, которые мы обязаны хранить в
+                  административных целях, по закону или целях безопасности.
+                </p>
+                <h3 class="main-form__heading">Куда отправляются ваши данные</h3>
+                <p>
+                  <strong class="privacy-policy-tutorial">Предлагаемый текст: </strong>
+                  Комментарии пользователей могут проверяться автоматическим сервисом определения спама.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-form__slonik modal-slonik main-form__slonik_js">
+        <div class="main-form__slonik-sps modal-slonik-sps main-form__slonik-sps_js">
+          <button class="main-form__modal-close modal-close main-form__modal-close_js" title="Закрыть">
+            &#10006;
+          </button>
+          <div class="main-form__elephant-png"></div>
+          <h2 class="main-form__modal-h2 main-form__modal-h2_elephant320 h2">
+            Спасибо, мы вам перезвоним!
+          </h2>
+        </div>
+      </div><!--d-31__top-slonik-->  
+
+
+
+    </main>
+    <footer class="footer">
+      <div class="container">...</div>
+    </footer>
+  </div>
+
+
+
+
+  <!-- Библиотеки -->
+  <!--Для Аккордеона, "Плавный скролл по якорям" тоже самое и для бургера-->
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> полная библиотека-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!--Маска формы input-ов-->
+  <script src="js/inputmask.min.js"></script>
+  <!--Валидатор input-ов-->
+  <script src="js/just-validate.min.js"></script>
+  <!--Скроллбар recording - /ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ-->
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+
+
+  <!-- мои -->
+  <script src="js/forma.js"></script>
+</body>
+
+</html>
