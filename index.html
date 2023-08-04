@@ -11,7 +11,7 @@
   <meta property="og:title" content="Недвижимость">
   <meta property="og:type" content="website">
   <meta property="og:url" content="здесь ссылка на сайт">
-  <!-- <meta property="og:image" content="картинка для поисковиков ссылка"> -->
+  <meta property="og:image" content="картинка для поисковиков ссылка">
   <meta property="og:image"
     content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Yandex_Mail_icon.svg/768px-Yandex_Mail_icon.svg.png конверт от яндекса пнг.png">
   <meta name="keywords" content="недвижимость, покупка, обмен, жильё, квартира, дом, ипотека, банк">
@@ -29,20 +29,22 @@
       <div class="container header__container"></div>
     </header>
     <main>
+      <p style="margin: 0; font-size: 18px; color: red;">Готов! Покажет модалку как к Вам на почту придёт заполненная форма.</p>
+          <p style="margin: 0; font-size: 14px; color: blue;">PHPMailer - https://github.com/leska-ver/forma-mail.yandex2023/tree/main/PHPMailer</p>
+        <p style="margin: 0; font-size: 14px; color: blue;">mail.php - https://github.com/leska-ver/forma-mail.yandex2023/blob/main/mail.php</p>
       <section class="contact-form recording" id="contact-form">
-        <!--  id="recording" -->
         <div class="container recording__container">
           <h2 class="global-title text-center">Форма обратной связи</h2>
           <!--Телефон-->
           <div class="recording__form margin--right">
-            <form class="recording__form form-js   main-form__form main-form__form_js   form-disabled" action="mail.php" method="POST" enctype="multipart/form-data" aria-label="Здесь вы можете заказать обратный звонок"><!-- id="checkboxForm" -->
-              <input type="hidden" name="admin_email[]" value="lyaisan.333@yandex.ru"><!-- artgoldcti@yandex.ru -->
+            <form class="recording__form form-js   main-form__form main-form__form_js   form-disabled" action="mail.php" method="POST" enctype="multipart/form-data" aria-label="Здесь вы можете заказать обратный звонок">
+              <input type="hidden" name="admin_email[]" value="artgoldcti333@yandex.ru">
               <input type="hidden" name="form_subject" value="Заявка с сайта --Форма, заглушка модалка, ответ на почте от mail.php--">
               <div class="recording__block">
                 <!--data здесь он обрабатывает плагин валидатор кода-->
                 <label class="recording__label" for="name">
                   <input class="recording__input global-input" type="text" name="name" placeholder="Ваше имя"
-                  data-validate-field="name" name="name" id="name" required aria-label="Введите ваше имя">
+                  data-validate-field="name" id="name" required aria-label="Введите ваше имя">
                 </label>
                 <label class="recording__label recording__label_none999" for="tel">
                   <input class="recording__input global-input" type="tel" placeholder="Телефон*"
@@ -50,7 +52,7 @@
                 </label>
                 <button class="recording__button btn recording__button_filled" aria-label="Нажмите чтобы отправить">
                   <!-- <img src="./img/button_icon_send.svg" alt=""> -->
-                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20px" height="14px" version="1.1" viewBox="0 0 0.48 0.34" xmlns:xlink="http://www.w3.org/1999/xlink"> <path d="M0.44 0l-0.4 0c-0.02,0 -0.04,0.02 -0.04,0.04l0 0.25c0,0.03 0.02,0.05 0.04,0.05l0.4 0c0.02,0 0.04,-0.02 0.04,-0.05l0 -0.25c0,-0.02 -0.02,-0.04 -0.04,-0.04zm-0.01 0.03c-0.01,0.01 -0.17,0.17 -0.18,0.18 -0.01,0 -0.02,0 -0.02,0l-0.18 -0.18 0.38 0zm-0.4 0.26l0 -0.24 0.12 0.12 -0.12 0.12zm0.02 0.02l0.12 -0.12 0.04 0.04c0.01,0.01 0.04,0.01 0.06,0l0.04 -0.04 0.12 0.12 -0.38 0zm0.4 -0.02l-0.12 -0.12 0.12 -0.12 0 0.24zm0 0z" fill="#ffffff" fill-rule="nonzero"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20px" height="14px" version="1.1" viewbox="0 0 0.48 0.34" xmlns:xlink="http://www.w3.org/1999/xlink"> <path d="M0.44 0l-0.4 0c-0.02,0 -0.04,0.02 -0.04,0.04l0 0.25c0,0.03 0.02,0.05 0.04,0.05l0.4 0c0.02,0 0.04,-0.02 0.04,-0.05l0 -0.25c0,-0.02 -0.02,-0.04 -0.04,-0.04zm-0.01 0.03c-0.01,0.01 -0.17,0.17 -0.18,0.18 -0.01,0 -0.02,0 -0.02,0l-0.18 -0.18 0.38 0zm-0.4 0.26l0 -0.24 0.12 0.12 -0.12 0.12zm0.02 0.02l0.12 -0.12 0.04 0.04c0.01,0.01 0.04,0.01 0.06,0l0.04 -0.04 0.12 0.12 -0.38 0zm0.4 -0.02l-0.12 -0.12 0.12 -0.12 0 0.24zm0 0z" fill="#ffffff" fill-rule="nonzero"/></svg>
                   <span>Отправить</span>
                 </button>
               </div>
@@ -59,8 +61,7 @@
                 <label class="recording__checkbox-label recording__checkbox-label_js   main-form__label-checkbox" for="checkbox">
                   Отправляя свои данные, Вы соглашаетесь с
                 </label>
-                <a class="recording__checkbox-link modalBtn-js   main-form__link" href="#" data-modal-trigger="trigger-1"
-                  aria-label="Нажмите чтобы прочитать Политикой конфиденциальности">Политикой конфиденциальности</a>
+                <a class="recording__checkbox-link modalBtn-js   main-form__link" href="#" data-modal-trigger="trigger-1" aria-label="Нажмите чтобы прочитать Политикой конфиденциальности">Политикой конфиденциальности</a>
               </div>
             </form>
           </div><!-- recording__form-->
